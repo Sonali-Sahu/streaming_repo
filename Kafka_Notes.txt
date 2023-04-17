@@ -66,8 +66,13 @@ P1 = [Mo,M1......]
 
 Commits -  it is very important. Mechanism in kafka to maintain or keep a track of messages consumed from kafka topic.
 
-Synchronous Commits :-
-Asynchronous Commits :-
+Synchronous Commits :- Blocking Call. if response is not there, it will not proceed further to 
+      next steps. if it fails, then it will start from Step -1 
+   Scenaio :- whereever we are concerned about data consitency then we use this. 
+   Impact - Will be having high latency.
+Asynchronous Commits :- response May Come later. if response is not there from commit, it will process further to next steps not waiting for the response. (Fire and Forget).
+Scenarios :- Data inconsistency is tolerated. 
+Impact - Low latency
 
 Eg. Topic (Order_Data) -> Kafka will maintain some information under Some Topic and it will start storing the updated offset from which data was consumed and consumer application made a successfull commits.
 after first read, commit will happen and offset 0 will be maintained in the metadata. 
@@ -93,8 +98,12 @@ it is basically Master - Slave Architecture.
 Key - Value (should be carefull about choosing the key column).
 Does Data Skewness problem exist in Kafka ? I think Yes.  as we publish data in key-value form.
 
+Challenges :- 
+duplicate partition processing/ partial processing
 
-                            
+we can do state maintenance / meta data to handle this scenarios.
+
+
                             
 
 
