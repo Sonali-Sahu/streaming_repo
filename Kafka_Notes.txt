@@ -12,7 +12,18 @@ Tool: Spark Structured Streaming.
 
 c.) Real Time Pipeline :- As soon as any event happens, the data generated is processed in fraction of seconds. 
 Tool:- Database CDC (Change Data Capture). we need to capture the change as soon as data is changed in Database. 
-Live Leaderboard. board is updated in real time. Twiteer, Bank Transaction, fraud detection (DE + DS). 
+Live Leaderboard. board is updated in real time. Twiteer, Bank Transaction, fraud detection (DE + DS), cricket score board. 
+
+
+In order to build, real time data pipelines, we need messaging queue kind of frameworks so that data can be holded for some time. 
+
+Apache Kafka + confluent kafka (same) is messaging queue. SQS (Simple Queue Service)(AWS). 
+
+Apache kafka is open source. Not is confluent kafka. 
+kafka is created at linkedIn. 
+
+
+
 
 
 
