@@ -1,2 +1,8 @@
-1. Use Case 
-a. Monthly Credit card 
+Apache Kafka :- 
+
+There are 3 types of Pipelines :- 
+a.) Batch Data Pipeline  :- Data needs to be computed in the batches or some kind of historical data.
+Eg. Monthly Credit Card Analysis. Frequency/Threshold (Daily/Weekly/Monthly/Yearly).
+b.) Near  Real Time Pipeline
+c.) Real Time Pipeline
+
