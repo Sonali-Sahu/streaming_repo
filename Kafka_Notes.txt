@@ -78,11 +78,25 @@ Eg. Topic (Order_Data) -> Kafka will maintain some information under Some Topic 
 after first read, commit will happen and offset 0 will be maintained in the metadata. 
 In 2nd read, data will be consumed from offset 1.
 
-Consumer group - 
+Pallelism in Kafka - Multi threaded - Producer -> Kafka Topic with Partition <- Single Consumer (Round robin Distribution) (Pushing back to queue). 
 
-Pallelism in Kafka - 
+a. Production speed is higher than consumption. 
+in this case, back pressue will be hit as consumer will not be able to match with producer. 
 
-Back Pressure -
+to solve this, we should scale our application. So multi threaded consumer set will be created which will handle the load from producer - kafka queue.
+
+
+So for Parallelism :-  from 1 partition, only 1 consumer of the same group will be able to read the data. there is no mix between consumer group n kafka topic partitions.
+
+eg. P1 and P2 will be processed by C1 and P3 and P4 will be processed by C2.
+
+
+Consumer group - all the consumers should have the same consumer group ID(Custom Name).
+2 different group id consumers can read from same partition.
+
+we should increase the number of the partitions.
+
+Back Pressure - consumer to producer
                             
 Kafka Model -  pub/sub
 
