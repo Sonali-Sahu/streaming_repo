@@ -38,7 +38,25 @@ source --------x-------------- Process ------                     Batch Processi
  Stores all the messages  --------                                      DWH (Transformed Data)
                             
                             
-                            
+Apache Flink :- pure real time. it is horizontally scalable. processing  engine like spark.
+can take any source like DB, Non-Structural data, stores and processes. 
+
+Kakfa Components :- 
+Producer - Application which publishes Data In kafka. 
+Consumer - application which consumes from kafka.
+Cluster - Kafka is a distributed System.
+Broker - 
+Topic - 
+Partitions -
+Replicas - 
+Offset - 
+Commits - 
+
+Consumer group - 
+
+Pallelism in Kafka - 
+
+Back Pressure -
                             
                             
                             
