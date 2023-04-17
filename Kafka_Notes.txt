@@ -45,9 +45,11 @@ Kakfa Components :-
 Producer - Application which publishes Data In kafka. 
 Consumer - application which consumes from kafka.
 Cluster - Kafka is a distributed System.
-Broker - 
-Topic - 
-Partitions -
+Broker -  Nodes in Kafka Cluster where actual data gets stored. 
+
+Topic -  small segments or space given with in kafka to store the data. 
+
+Partitions - 
 Replicas - 
 Offset - 
 Commits - 
@@ -59,7 +61,16 @@ Pallelism in Kafka -
 Back Pressure -
                             
                             
-                            
+Kafka Architecture :- 
+it is basically Master - Slave Architecture. 
+
+                [ Leader ]  -> Manage
+            /       |           \
+         Broker    Broker       broker 
+         
+         s1       s2           s3
+         
+    
                             
                             
 
