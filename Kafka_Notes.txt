@@ -54,9 +54,15 @@ into multiple partitions.  in a partition, messages will maintain their arrival 
 timestamp.
 On topic level, sequencing is not available.
 
-Replicas -  
+Replicas -   if the replica factor is 3, there will be 3 broker each holding a replica of partitions.
 
-Offset - 
+Offsets - Unique Id number for a  message with in a partition. 
+Eg. P1 = []  # empty partition P1
+after data is added 
+P1 = [Mo,M1......]
+      0   1   2   3   <-  Offsets
+  this means Mo has been published to offset [0]
+  
 
 Commits - 
 
@@ -77,7 +83,10 @@ it is basically Master - Slave Architecture.
          
          s1       s2           s3
          
-    
+Key - Value (should be carefull about choosing the key column).
+Does Data Skewness problem exist in Kafka ? I think Yes.  as we publish data in key-value form.
+
+
                             
                             
 
