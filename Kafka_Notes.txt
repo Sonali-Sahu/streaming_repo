@@ -1,4 +1,4 @@
-Apache Kafka :- 
+Apache Kafka :-  Pull Mechanism.
 
 There are 3 types of Pipelines :- 
 a.) Batch Data Pipeline  :- Data needs to be computed in the batches or some kind of historical data.
@@ -64,7 +64,14 @@ P1 = [Mo,M1......]
   this means Mo has been published to offset [0]
   
 
-Commits - 
+Commits -  it is very important. Mechanism in kafka to maintain or keep a track of messages consumed from kafka topic.
+
+Synchronous Commits :-
+Asynchronous Commits :-
+
+Eg. Topic (Order_Data) -> Kafka will maintain some information under Some Topic and it will start storing the updated offset from which data was consumed and consumer application made a successfull commits.
+after first read, commit will happen and offset 0 will be maintained in the metadata. 
+In 2nd read, data will be consumed from offset 1.
 
 Consumer group - 
 
