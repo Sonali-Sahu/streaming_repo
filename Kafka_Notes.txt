@@ -49,9 +49,13 @@ Broker -  Nodes in Kafka Cluster where actual data gets stored.
 
 Topic -  small segments or space given with in kafka to store the data. 
 
-Partitions - 
+Partitions -  Dividing the data in multiple parts inside a topic. each topic will be divided 
+into multiple partitions. 
+
 Replicas - 
+
 Offset - 
+
 Commits - 
 
 Consumer group - 
@@ -60,7 +64,8 @@ Pallelism in Kafka -
 
 Back Pressure -
                             
-                            
+Kafka Model -  pub/sub
+
 Kafka Architecture :- 
 it is basically Master - Slave Architecture. 
 
