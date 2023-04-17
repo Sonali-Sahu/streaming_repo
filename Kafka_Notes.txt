@@ -2,7 +2,17 @@ Apache Kafka :-
 
 There are 3 types of Pipelines :- 
 a.) Batch Data Pipeline  :- Data needs to be computed in the batches or some kind of historical data.
-Eg. Monthly Credit Card Analysis. Frequency/Threshold (Daily/Weekly/Monthly/Yearly).
-b.) Near  Real Time Pipeline
-c.) Real Time Pipeline
+Eg. Monthly Credit Card Analysis, electricity Bills. 
+Frequency/Threshold (Daily/Weekly/Monthly/Yearly).
+Tools :- Airflow,Hive, Spark , Data Warehouse, Visualization.
+
+b.) Near  Real Time Pipeline :- We process the data in micro batches. Eg. 
+
+Tool: Spark Structured Streaming.
+
+c.) Real Time Pipeline :- As soon as any event happens, the data generated is processed in fraction of seconds. 
+Tool:- Database CDC (Change Data Capture). we need to capture the change as soon as data is changed in Database. 
+Live Leaderboard. board is updated in real time. Twiteer, Bank Transaction, fraud detection (DE + DS). 
+
+
 
