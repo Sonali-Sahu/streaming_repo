@@ -14,6 +14,8 @@ c.) Real Time Pipeline :- As soon as any event happens, the data generated is pr
 Tool:- Database CDC (Change Data Capture). we need to capture the change as soon as data is changed in Database. 
 Live Leaderboard. board is updated in real time. Twiteer, Bank Transaction, fraud detection (DE + DS), cricket score board. 
 
+Tool :- Apache Flink
+
 
 In order to build, real time data pipelines, we need messaging queue kind of frameworks so that data can be holded for some time. 
 
@@ -22,8 +24,25 @@ Apache Kafka + confluent kafka (same) is messaging queue. SQS (Simple Queue Serv
 Apache kafka is open source. Not is confluent kafka. 
 kafka is created at linkedIn. 
 
-
-
-
+                                                              Restaurant (Cassandra)
+eg.  Food Delivery                                            /\      |
+                                                          / ---|      |
+                              consumer                 /              |
+                                   |                /                 |
+Food app                    |           |         /                  \|/
+source --------x-------------- Process ------                     Batch Processing
+                                                              (Spark (Structured Streaming))
+    |                       |     /\    |                               |
+   \|/                            |                                     |
+ Queue(Kafka)                     |                                    \|/
+ Stores all the messages  --------                                      DWH (Transformed Data)
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
 
 
