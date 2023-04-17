@@ -50,9 +50,11 @@ Broker -  Nodes in Kafka Cluster where actual data gets stored.
 Topic -  small segments or space given with in kafka to store the data. 
 
 Partitions -  Dividing the data in multiple parts inside a topic. each topic will be divided 
-into multiple partitions. 
+into multiple partitions.  in a partition, messages will maintain their arrival sequence based on the 
+timestamp.
+On topic level, sequencing is not available.
 
-Replicas - 
+Replicas -  
 
 Offset - 
 
