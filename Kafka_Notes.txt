@@ -117,7 +117,19 @@ duplicate partition processing/ partial processing
 
 we can do state maintenance / meta data to handle this scenarios.
 
+Schema Registry :- it provides a centralized repository for managing and validating Schema
+for topic message data, and for serialization and deserialization of the data over the network.
 
-                            
+Producers and consumers to kafka topics can use schemas to ensure data consistency and compatilibility
+as schema evolve.
+
+
+serialization - Deserialization. 
+
+serialization is the process of converting structured data into raw form. (eg.  Object -> ByteForm)
+
+Deserialization is the process of  reconstructing structured forms from the data's bit stream form. 
+
+
 
 
